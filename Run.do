@@ -4,11 +4,11 @@
 *net install traj, force
 *help traj
 
-use http://www.andrew.cmu.edu/user/bjones/traj/data/montreal_sim.dta,
-    clear
+use http://www.andrew.cmu.edu/user/bjones/traj/data/montreal_sim.dta, clear
 
 	
 traj, var(qcp*op) indep(age*) model(cnorm) min(0) max(10) order(1 3 2)
+
 
 * var= dependent variables
 * indep= whent the dependent variables were measured
@@ -17,12 +17,19 @@ traj, var(qcp*op) indep(age*) model(cnorm) min(0) max(10) order(1 3 2)
 * min= minimum value for cnorm model
 * max= max value for cnorm model
 
+*ssc install svret
+svret e
+list
 
-ereturn list
-
-*
+* Gets the model fit statistics
+* e_numG~1= number of groups
+* e_BIC_N~a= BIC based on the number of data points
+* e(BIC_N~s)  BIC based on the number of subjects
+* e(AIC) =  AIC
+* e(ll)= log liklihood
 
 trajplot, xtitle(Age) ytitle(Opposition) xlabel(6(1)15) ylabel(0(1)6)
+
 
 * Group assignment and group membership probabilities for the first 2 subject
 
