@@ -10,6 +10,14 @@ use http://www.andrew.cmu.edu/user/bjones/traj/data/montreal_sim.dta,
 	
 traj, var(qcp*op) indep(age*) model(cnorm) min(0) max(10) order(1 3 2)
 
+* var= dependent variables
+* indep= whent the dependent variables were measured
+* model= based on the probability distirbution of the dependent- cnorm (normal), zip (poisson with lots of zeros), logit (binary)
+* order= 1-linear, 2-quadratic, 3-cubic
+* min= minimum value for cnorm model
+* max= max value for cnorm model
+
+
 ereturn list
 
 *
