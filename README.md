@@ -1,4 +1,6 @@
-Stata do file to run Group based trajectory models <br/>
-Examples from the Reference page
+<B> Group based trajectory models<B/>
+
+Run this stata do file to estimate Group based trajectory models <br/>
+These examples are from the Reference page
 
 
