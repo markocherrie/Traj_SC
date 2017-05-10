@@ -4,8 +4,7 @@
 *net install traj, force
 *help traj
 
-use http://www.andrew.cmu.edu/user/bjones/traj/data/montreal_sim.dta,
-    clear
+use http://www.andrew.cmu.edu/user/bjones/traj/data/montreal_sim.dta, clear
 
 	
 traj, var(qcp*op) indep(age*) model(cnorm) min(0) max(10) order(1 3 2)
